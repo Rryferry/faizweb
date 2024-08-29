@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - FAIZ ZAYDAN</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .contact-card {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .contact-card:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-red-700">FAIZ ZAYDAN</div>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="index.html" class="text-gray-900 hover:text-gray-600"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="About.html" class="text-gray-900 hover:text-gray-600"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="Blog.html" class="text-gray-900 hover:text-gray-600"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="Contaact.html" class="text-gray-900 hover:text-gray-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="text-gray-900 hover:text-gray-600">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-semibold text-gray-900">Get in Touch</h2>
+          <p class="text-gray-600 mt-4">
+            Have any questions or want to get in touch? Fill out the form below
+            or use the contact information provided.
+          </p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <!-- Contact Form -->
+          <div class="w-full md:w-1/2 p-4">
+            <div class="contact-card p-8">
+              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                Contact Form
+              </h3>
+              <form action="" method="post">
+                <div class="mb-4">
+                  <label
+                    for="name"
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="email"
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="message"
+                    class="block text-gray-700 text-sm font-semibold mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg"
+                  onclick="message"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- Contact Information -->
+          <div class="w-full md:w-1/2 p-4">
+            <div class="contact-card p-8">
+              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+                Contact Information
+              </h3>
+              <ul class="text-gray-600">
+                <li class="mb-4">
+                  <a
+                    href="https://www.instagram.com/faiz_zaydan/"
+                    class="hover:text-red-600 transition-transform transform hover:scale-110"
+                    ><i class="bx bxl-instagram"></i> faiz_zaydan</a
+                  >
+                </li>
+                <li class="mb-4">
+                  <a
+                    href="https://open.spotify.com/user/532cm5hd13rv64v615f2ovyux?si=388bedf750ee446f"
+                    class="hover:text-green-600 transition-transform transform hover:scale-110"
+                    ><i class="bx bxl-spotify"></i> Faiz</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@faizzaydan?is_from_webapp=1&sender_device=pc"
+                    class="hover:text-blue-600 transition-transform transform hover:scale-110"
+                    ><i class="bx bxl-tiktok"></i> faizzaydan</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Faiz Zaydan. All rights reserved.</p>
+        <div class="mt-2">
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="mt-2 flex justify-center space-x-3">
+          <a
+            href="https://www.instagram.com/faiz_zaydan/"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-instagram bx-xs"></i>
+          </a>
+          <a
+            href="https://open.spotify.com/user/532cm5hd13rv64v615f2ovyux?si=388bedf750ee446f"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-spotify bx-xs"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@faizzaydan?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-tiktok bx-xs"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
