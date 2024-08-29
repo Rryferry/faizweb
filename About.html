@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About & What I Do</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom Tailwind Config for Animations */
+      @layer utilities {
+        .animate-fade-in {
+          @apply opacity-0 transform scale-95;
+          animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        .animate-slide-up {
+          @apply opacity-0 translate-y-4;
+          animation: slideUp 0.6s forwards;
+        }
+
+        @keyframes slideUp {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-bounce-once {
+          animation: bounce 1s ease-in-out;
+        }
+      }
+
+      /* Custom styles for additional design */
+      .bg-custom-pattern {
+        background-image: url("https://source.unsplash.com/random/1200x600");
+        background-size: cover;
+        background-position: center;
+      }
+      .gradient-overlay {
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.3)
+        );
+      }
+      .navbar-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        transition: background-color 0.3s, box-shadow 0.3s;
+      }
+      .navbar-scrolled {
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+      .footer-sm {
+        padding: 1rem;
+      }
+      .content {
+        margin-top: 4rem;
+      }
+      .bg-light-pattern {
+        background-image: url("https://source.unsplash.com/random/1200x800");
+        background-size: cover;
+        background-position: center;
+        background-blur: 5px;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-out;
+      }
+
+      .scale-up {
+        transform: scale(0.9);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .scale-up:hover {
+        transform: scale(1);
+      }
+
+      /* Custom styles for poetry font */
+      .poetry-font {
+        font-family: "Georgia", serif;
+        font-size: 1.125rem; /* Adjust as needed */
+        line-height: 1.6;
+        color: #333;
+        text-align: justify;
+        padding: 1rem;
+        margin: 0 auto;
+        max-width: 800px; /* Adjust as needed */
+      }
+
+      .poetry-font::first-letter {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #4a4a4a;
+      }
+
+      .highlight {
+        background-color: rgba(255, 255, 0, 0.2);
+        padding: 0.25rem;
+      }
+      /* Animasi untuk judul */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .title-animate {
+        animation: fadeInUp 1s ease-out;
+      }
+      /* Hover effect for images */
+      .image-hover-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .image-hover-effect:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+      /* Fade-in animation */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.5s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      /* Slide-up animation */
+      .slide-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .slide-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-white navbar-fixed">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-red-700">FAIZ ZAYDAN</div>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="index.html" class="text-gray-900 hover:text-gray-600"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="About.html" class="text-gray-900 hover:text-gray-600"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="Blog.html" class="text-gray-900 hover:text-gray-600"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="Contaact.html" class="text-gray-900 hover:text-gray-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="text-gray-900 hover:text-gray-600">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- About Section -->
+      <div class="container mx-auto my-20 p-6">
+        <div class="flex justify-between items-center animate-slide-up">
+          <!-- Left Column -->
+          <div class="w-1/2">
+            <h1 class="text-5xl font-bold tracking-wide title-animate">
+              ABOUT
+            </h1>
+          </div>
+
+          <!-- Right Column -->
+          <div class="w-1/2 text-right">
+            <h2 class="text-4xl font-bold text-red-600">FAIZ</h2>
+            <h2 class="text-4xl font-bold text-red-600">ZAYDAN</h2>
+          </div>
+        </div>
+
+        <!-- Bio Section -->
+        <div class="mt-10 text-lg fade-in">
+          <p>
+            Halo, saya Faiz Zaydan... Seorang <em>Manusia</em> yang kebetulan
+            Seorang Yg Sedang <em>Sendiri</em>. Sedang sibuk menikmati hidup
+            dengan cara menjalankannya. Biasa diucapkan selamat pada tanggal 04
+            Oktober.
+          </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="mt-10 -mx-6 animate-slide-up">
+          <img
+            src="faiz1.jpg"
+            alt="About Image"
+            class="w-full h-auto rounded-lg shadow-lg object-cover image-hover-effect"
+            style="height: 350px"
+          />
+
+          <!-- Styled Paragraph Section -->
+          <div class="container mx-auto my-10 p-6">
+            <p class="poetry-font">
+              Saya mengambil jurusan Teknik Komputer Jaringan di Smk Nu Maarif
+              Kudus dan semoga lulus tepat waktu pada tahun 2025. Terdengar
+              tidak penting, tapi setidaknya saya bisa memulai obrolan dengan,
+              “…sebagai anak IT,”
+              <br /><br />
+              Sedari kecil saya sudah suka dengan dunia IT,Tanpa saya sadar
+              cukup konsisten sampai bisa naik tingkat. Saya terus belajar
+              belajar dan belajar, ntah sampai kapan saya bisa berhenti belajar.
+              andai saja bisa hehehe
+              <br /><br />
+              Sedikit hal tentang blog ini, semua tulisan saya sebisa mungkin
+              dikemas dengan serius, tapi ada bercandanya. Karena saya kalo
+              bercanda memang serius.
+              <br /><br />
+              Saya suka dengerin lagu Dewa19, Hindia, Nadin amizah, dan banyak
+              lagi. Terkadang ketika banyak pikiran lagu merekalah yg menemani,
+              Hmmm mau sampai kapan di temenin lagu. Saya suka nonton film atau
+              series, sesekali juga suka baca buku, tapi itu kalo udah capek
+              main game.
+              <br /><br />
+              Sebelum masuk ke bagian selanjutnya, persilakan saya untuk
+              mempersilakan kamu, pembaca blog ini, baik yang baru ataupun lama,
+              baik yang nggak sengaja nge-klik halaman ini atau memang secara
+              sadar punya intensi tertentu: apa pun tujuannya, ya…. jangan
+              macam-macam karena di blog ini ada
+              <span class="highlight">CCTV (mahal lagi)</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- What I Do Section -->
+      <div class="container mx-auto my-20 p-6">
+        <!-- Title Section -->
+        <div class="text-center mb-12 animate-fade-in">
+          <h1 class="text-5xl font-bold tracking-wide animate-bounce-once">
+            WHAT I DO?
+          </h1>
+        </div>
+
+        <!-- Content Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Talkshow Section -->
+          <div class="text-center animate-slide-up">
+            <img
+              src="pemateri.png"
+              alt="Talkshow"
+              class="w-full h-64 rounded-lg shadow-lg object-cover mb-4 transition-transform duration-500 hover:scale-105"
+            />
+            <h2 class="text-2xl font-bold mb-4">Talkshow</h2>
+            <p>Saya bisa diundang menjadi pembicara dengan berbagai topik.</p>
+          </div>
+
+          <!-- YouTube Section -->
+          <div class="text-center animate-slide-up">
+            <img
+              src="Pendaki.png"
+              alt="YouTube"
+              class="w-full h-64 rounded-lg shadow-lg object-cover mb-4 transition-transform duration-500 hover:scale-105"
+            />
+            <h2 class="text-2xl font-bold mb-4">Outdoor</h2>
+            <p>Mengisi waktu luang dengan kegiatan OutDoor.</p>
+          </div>
+
+          <!-- Film Section -->
+          <div class="text-center animate-slide-up">
+            <img
+              src="TI.png"
+              alt="Film"
+              class="w-auto h-64 rounded-lg shadow-lg object-cover mb- transition-transform duration-500 hover:scale-105"
+            />
+            <h2 class="text-2xl font-bold mb-4">It</h2>
+            <p>Ahli it dalam bidang tertentu khususnya cyber security.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Faiz Zaydan. All rights reserved.</p>
+        <div class="mt-2">
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="mt-2 flex justify-center space-x-3">
+          <a
+            href="https://www.instagram.com/faiz_zaydan/"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-instagram bx-xs"></i>
+          </a>
+          <a
+            href="https://open.spotify.com/user/532cm5hd13rv64v615f2ovyux?si=388bedf750ee446f"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-spotify bx-xs"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@faizzaydan?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-tiktok bx-xs"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Navbar Scroll Effect -->
+    <script>
+      // JavaScript to handle scroll effects
+      window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("navbar-scrolled");
+        } else {
+          navbar.classList.remove("navbar-scrolled");
+        }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".slide-up");
+
+        const handleScroll = () => {
+          elements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+              element.classList.add("visible");
+            }
+          });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Initial check
+      });
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

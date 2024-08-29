@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - FAIZ ZAYDAN</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .blog-card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+      .blog-img {
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+      }
+      /* Styling untuk navbar agar fixed saat scroll */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50; /* Agar navbar berada di atas konten lainnya */
+        background-color: white; /* Menjaga warna latar belakang tetap putih */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek elevasi */
+      }
+      /* Menambahkan padding pada body untuk menghindari konten tertutup oleh navbar */
+      body {
+        padding-top: 4rem; /* Sesuaikan dengan tinggi navbar */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-red-700">FAIZ ZAYDAN</div>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="index.html" class="text-gray-900 hover:text-gray-600"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="About.html" class="text-gray-900 hover:text-gray-600"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="Blog.html" class="text-gray-900 hover:text-gray-600"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a href="Contaact.html" class="text-gray-900 hover:text-gray-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="text-gray-900 hover:text-gray-600">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-semibold text-gray-900">
+            Latest Blog Posts
+          </h2>
+          <p class="text-gray-600 mt-4">
+            Catch up on the latest posts from Faiz Zaydan's blog.
+          </p>
+        </div>
+        <div class="flex flex-wrap -m-4">
+          <!-- Blog Post 1 -->
+          <div class="w-full md:w-1/3 p-4">
+            <div class="bg-gray-100 rounded-lg shadow-lg blog-card">
+              <div
+                class="blog-img"
+                style="background-image: url('merbabu.png')"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                  Keindahan gunung merbabu
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Keindahan alam indonesia yang seperti surga pada dunia.
+                </p>
+                <a
+                  href="#"
+                  class="text-red-600 hover:text-red-700 font-semibold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div class="w-full md:w-1/3 p-4">
+            <div class="bg-gray-100 rounded-lg shadow-lg blog-card">
+              <div
+                class="blog-img"
+                style="background-image: url('rafting.png')"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                  Rafting bersama keluarga
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Merasakan sensasi olahraga rafting bersama keluarga
+                </p>
+                <a
+                  href="#"
+                  class="text-red-600 hover:text-red-700 font-semibold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div class="w-full md:w-1/3 p-4">
+            <div class="bg-gray-100 rounded-lg shadow-lg blog-card">
+              <div
+                class="blog-img"
+                style="background-image: url('bali.png')"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                  wonderful of bali
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Setiap langkah adalah sebuah cerita, setiap detik adalah
+                  sebuah pengalaman. Di antara riuhnya dunia, jangan lupa
+                  menikmati keindahan sederhana yang menyentuh hati.
+                </p>
+                <a
+                  href="#"
+                  class="text-red-600 hover:text-red-700 font-semibold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 4 -->
+          <div class="w-full md:w-1/3 p-4">
+            <div class="bg-gray-100 rounded-lg shadow-lg blog-card">
+              <div
+                class="blog-img"
+                style="background-image: url('rewaind.png')"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                  Forum osis jawa tengah rewind
+                </h3>
+                <p class="text-gray-600 mb-4">Melepas rindu dan temu</p>
+                <a
+                  href="#"
+                  class="text-red-600 hover:text-red-700 font-semibold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 5 -->
+          <div class="w-full md:w-1/3 p-4">
+            <div class="bg-gray-100 rounded-lg shadow-lg blog-card">
+              <div
+                class="blog-img"
+                style="background-image: url('ldj.png')"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                  Latihan dasar jurnalistik
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Menjadi panitia latihan dasar jurnalistik smk nu maarif kudus
+                </p>
+                <a
+                  href="#"
+                  class="text-red-600 hover:text-red-700 font-semibold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 6 -->
+          <div class="w-full md:w-1/3 p-4">
+            <div class="bg-gray-100 rounded-lg shadow-lg blog-card">
+              <div
+                class="blog-img"
+                style="background-image: url('paskib.png')"
+              ></div>
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                  Paskibraka
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Menjadi bagian pasukan pengibar bendera pada saat 17 agustus
+                  2023
+                </p>
+                <a
+                  href="#"
+                  class="text-red-600 hover:text-red-700 font-semibold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Faiz Zaydan. All rights reserved.</p>
+        <div class="mt-2">
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-gray-400 hover:text-white mx-2"
+            >Terms of Service</a
+          >
+        </div>
+        <div class="mt-2 flex justify-center space-x-3">
+          <a
+            href="https://www.instagram.com/faiz_zaydan/"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-instagram bx-xs"></i>
+          </a>
+          <a
+            href="https://open.spotify.com/user/532cm5hd13rv64v615f2ovyux?si=388bedf750ee446f"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-spotify bx-xs"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@faizzaydan?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            class="text-gray-400 hover:text-white"
+          >
+            <i class="bx bxl-tiktok bx-xs"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
